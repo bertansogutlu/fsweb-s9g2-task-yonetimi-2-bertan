@@ -1,5 +1,6 @@
 import React from "react";
-import { formatDistanceToNow } from 'date-fns'
+import { formatDistanceToNow } from 'date-fns';
+import tr from 'date-fns/locale/tr'
 
 
 const Task = ({ taskObj, onComplete }) => {
@@ -9,7 +10,8 @@ const Task = ({ taskObj, onComplete }) => {
       <h3>{taskObj.title}</h3>
       <div className="deadline">son teslim: <span>{
         formatDistanceToNow(
-          new Date(taskObj.deadline)
+          new Date(taskObj.deadline),
+          {locale: tr}
         )
         }</span></div>
       <p>{taskObj.description}</p>
