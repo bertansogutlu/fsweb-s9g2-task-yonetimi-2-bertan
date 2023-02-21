@@ -18,7 +18,7 @@ const Task = ({ taskObj, onComplete }) => {
   return (
     <div className="task">
       <h3>{taskObj.title}</h3>
-      <div className="deadline">son teslim: <span className={(distanceInDays < 3) ? "urgent" : "normal"}>{DistanceToNow}</span></div>
+      <div className="deadline">son teslim: <span className={(distanceInDays <= 3) ? "urgent" : "normal"}>{DistanceToNow}</span></div>
       <p>{taskObj.description}</p>
       <div>
         {taskObj.people.map((p) => (
