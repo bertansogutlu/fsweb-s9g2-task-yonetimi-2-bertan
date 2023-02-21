@@ -14,9 +14,9 @@ const Task = ({ taskObj, onComplete }) => {
     new Date(taskObj.deadline),
     new Date()
   )
-
+  
   return (
-    <div className="task">
+    <div className="pt-6 bg-[#fff] rounded-[5px] leading-normal mt-4 shadow-[0_4px_5px_0_rgb(0,0,0,0.1)]">
       <h3>{taskObj.title}</h3>
       <div className="deadline">son teslim: <span className={(distanceInDays <= 3) ? "urgent" : "normal"}>{DistanceToNow}</span></div>
       <p>{taskObj.description}</p>
