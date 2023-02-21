@@ -11,7 +11,7 @@ const Task = ({ taskObj, onComplete }) => {
       <div className="deadline">son teslim: <span>{
         formatDistanceToNow(
           new Date(taskObj.deadline),
-          {locale: tr}
+          { addSuffix: true, locale: tr },
         )
         }</span></div>
       <p>{taskObj.description}</p>
