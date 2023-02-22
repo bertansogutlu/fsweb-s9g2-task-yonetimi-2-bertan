@@ -18,7 +18,7 @@ const Task = ({ taskObj, onComplete }) => {
   return (
     <div className="pt-6 bg-[#fff] rounded-[5px] leading-normal mt-4 shadow-[0_4px_5px_0_rgb(0,0,0,0.1)]">
       <h3>{taskObj.title}</h3>
-      <div className="text-xs pt-1">son teslim: <span className={(distanceInDays <= 3) ? "urgent" : "normal"}>{DistanceToNow}</span></div>
+      <div className="text-xs pt-1">son teslim: <span className={(distanceInDays <= 3) ? "bg-[#ffd9d4]" : "bg-[#d4d7ff]"}>{DistanceToNow}</span></div>
       <p>{taskObj.description}</p>
       <div>
         {taskObj.people.map((p) => (
