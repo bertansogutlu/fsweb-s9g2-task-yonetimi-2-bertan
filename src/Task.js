@@ -22,7 +22,7 @@ const Task = ({ taskObj, onComplete }) => {
       <p>{taskObj.description}</p>
       <div>
         {taskObj.people.map((p) => (
-          <span className="pill" key={p}>{p}</span>
+          <span className="inline-block p-[5px_12px] text-sm border-solid border-[1px] border-[#ccc] mr-1 mb-1.5 rounded-[30px]" key={p}>{p}</span>
         ))}
       </div>
       {onComplete && <button onClick={() => onComplete(taskObj.id)}>Tamamlandı</button>}
